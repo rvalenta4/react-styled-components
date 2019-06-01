@@ -11,8 +11,13 @@ let Button = ({className, children, click, hover}) => {
     )
 }
 
+const colors = {
+    blue: '#4f7aab',
+    red: 'dd1e15'
+}
+
 Button = styled(Button).attrs(({click, hover}) => ({click: click, hover: hover}))`
-    color: #4f7aab;
+    color: ${colors.blue};
     font-size: 1.5rem;
     font-weight: bold;
     height: ${props => props.primary ? '3rem' : '2rem'};
