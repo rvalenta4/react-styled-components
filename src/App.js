@@ -1,21 +1,21 @@
 import React from 'react';
 import './App.css';
-import StyledButton from './components/Button'
+import Button from './components/Button'
 
 const App = () => {
   return (
     <>
-      <StyledButton
+      <Button
         primary
         click={() => console.log('I am a primary button and I was clicked')}
         hover={() => console.log('I am a primary button and I was hovered')}>
         Primary
-      </StyledButton>
-      <StyledButton
-        click={() => console.log('I am a primary button and I was clicked')}
-        hover={() => console.log('I am a primary button and I was hovered')}>
+      </Button>
+      <Button
+        click={() => console.log('I am a secondary button and I was clicked')}
+        hover={() => console.log('I am a secondary button and I was hovered')}>
         Secondary
-      </StyledButton>
+      </Button>
     </>
   );
 }

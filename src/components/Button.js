@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
 
-const Button = ({className, children, click, hover}) => {
+let Button = ({className, children, click, hover}) => {
     return (
         <button 
             onClick={() => click()}
@@ -11,19 +11,21 @@ const Button = ({className, children, click, hover}) => {
     )
 }
 
-const StyledButton = styled(Button).attrs(({click, hover}) => ({click: click, hover: hover}))`
-    color: palevioletred;
+Button = styled(Button).attrs(({click, hover}) => ({click: click, hover: hover}))`
+    color: #4f7aab;
     font-size: 1.5rem;
     font-weight: bold;
-    height: 2rem;
+    height: ${props => props.primary ? '3rem' : '2rem'};
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
     ${props =>
         props.primary &&
         css`
-            background: palevioletred;
+            background-color: #4f7aab;
             color: white;
         `
     };
 `
 
-export default StyledButton
+export default Button
